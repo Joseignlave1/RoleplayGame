@@ -14,12 +14,14 @@ namespace RolePLay
             Item item3 = new Item("Arma","Espada",10,0);
             Item item4 = new Item("Arma","Pistola",15,0);
 
-            Elfo elfo1= new  Elfo("Josesito",100);
-            Item item5= new Item("Arma","Banco de estadio",15,0);
+            Elfo elfo1 = new  Elfo("Josesito",100);
+            Item item5 = new Item("Arma","Banco de estadio",15,0);
             Item item6 = new Item("Arma","Bastón mágico",20,8);
-
             
-        
+            Enano enano2 = new Enano("Chorch", 100);
+            Item item7 = new Item("Arma", "Hacha", 20,0);
+            Item item8 = new Item("Armadura", "Escudo", 5,15);
+            
         }
     }
 }
