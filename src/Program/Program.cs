@@ -21,6 +21,11 @@ namespace RolePLay
             Enano enano2 = new Enano("Chorch", 100);
             Item item7 = new Item("Arma", "Hacha", 20,0);
             Item item8 = new Item("Armadura", "Escudo", 5,15);
+
+            Enano enano3 = new Enano ("Anabelle", 100);
+            Item item9 = new Item("Arma", "Lanza", 30, 0);
+            Item item10 = new Item("Armadura", "Túnica", 0, 10);
+
             
         }
     }
