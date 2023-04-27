@@ -1,13 +1,25 @@
 using NUnit.Framework;
+using RolePlayGame;
 
 namespace Test.Library
 {
     public class ExampleTest
     {
-        [Test]
-        public void dummyTest()
+        [Setup]
+        public void Setup()
         {
-            Assert.True(true);
+
+        }
+        [Test]
+        public void AtacarTest()
+        {
+            Enano enano = new Enano("Enano", 100);
+            Item item1 = new Item("Arma", "Martillo", 21, 0);
+            Mago mago = new Mago("Mago", 100);
+            enano.Atacar(mago);
+            int actual = mago.Salud;
+            int expected = 100 - 21;
+            Assert.That(actual, Is.EqualTo(expected));
         }
     }
 }
