@@ -4,8 +4,8 @@ namespace RolePLay
     {
         string Tipo {get;}
         string Nombre {get;}
-        int Daño {get;}
-        int Defensa{get;}
+        public int Daño {get;}
+        public int Defensa{get;}
 
         public Item(string tipo, string nombre, int daño, int defensa)
         {

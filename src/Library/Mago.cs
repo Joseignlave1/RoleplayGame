@@ -6,7 +6,7 @@ namespace RolePLay
     {
         string Nombre {get;}
         int Salud {get; set;}
-        List<Item> listaItems = new List<Item>();
+        public List<Item> listaItems = new List<Item>();
 
         public Mago (string nombre, int salud)
         {
@@ -24,15 +24,15 @@ namespace RolePLay
             listaItems.Remove(item);
         }
 
-        public void Atacar(object Objetivo)
+        public void RecibirAtaque(int daño)
         {
-            Objetivo.Salud = Objetivo.Salud - (this.listaItems.Daño - Objetivo.listaItems.Defensa);
+            this.Salud = this.Salud - (this.ObtenerDefensa() - daño);
         }
 
         public int ObtenerAtaque()
         {
             int AtaqueTotal = 0;
-            for (int i = 0; i < listaItems.Count(); i++)
+            for (int i = 0; i < listaItems.Count; i++)
             {
                 AtaqueTotal += listaItems[i].Daño;
             }
@@ -42,7 +42,7 @@ namespace RolePLay
         public int ObtenerDefensa()
         {
             int DefensaTotal = 0;
-            for(int i = 0; i < listaItems.Count(); i++)
+            for(int i = 0; i < listaItems.Count; i++)
             {
                 DefensaTotal += listaItems[i].Defensa;
             }

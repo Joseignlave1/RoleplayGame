@@ -31,7 +31,7 @@ namespace RolePLay
             Console.WriteLine(mago1.ObtenerAtaque());
             enano2.AgregarItem(item8);
             Console.WriteLine(enano2.ObtenerDefensa());
-            mago1.Atacar(enano2);
+            enano2.RecibirAtaque(mago1.ObtenerAtaque());
             enano2.Curar();
         }
     }
