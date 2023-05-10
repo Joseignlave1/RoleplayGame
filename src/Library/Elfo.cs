@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace RolePLay
 {
-    public class Elfo
+    public class Elfo : IAtacable
     {
         string Nombre {get;}
         int Salud {get; set;}
@@ -24,7 +24,7 @@ namespace RolePLay
             listaItems.Remove(item);
         }
 
-        public void Atacar(int daño)
+        public void RecibirAtaque(int daño)
         {
             this.Salud = this.Salud - (this.ObtenerDefensa() - daño);
         }

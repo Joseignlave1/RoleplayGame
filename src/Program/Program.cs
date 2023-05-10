@@ -26,13 +26,13 @@ namespace RolePLay
             Item item9 = new Item("Arma", "Lanza", 30, 0);
             Item item10 = new Item("Armadura", "Túnica", 0, 10);
 
-            mago1.AgregarItem(item3);
-            mago1.AgregarItem(item4);
+            mago1.AgregarItem(item9);
+            mago1.AgregarItem(item8);
             Console.WriteLine(mago1.ObtenerAtaque());
-            enano2.AgregarItem(item8);
-            Console.WriteLine(enano2.ObtenerDefensa());
-            enano2.RecibirAtaque(mago1.ObtenerAtaque());
-            enano2.Curar();
+            enano3.AgregarItem(item8);
+            Console.WriteLine(enano3.ObtenerDefensa());
+            enano3.RecibirAtaque(mago1.ObtenerAtaque());
+            enano3.Curar();
         }
     }
 }

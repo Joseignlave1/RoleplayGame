@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace RolePLay
 {
-    public class Mago
+    public class Mago : IAtacable
     {
         string Nombre {get;}
         int Salud {get; set;}
