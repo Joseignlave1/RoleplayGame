@@ -2,13 +2,13 @@ using System.Collections.Generic;
 
 namespace RolePLay
 {
-    public class Elfo : IAtacable
+    public class LosMalos : IAtacable
     {
         string Nombre {get;}
         int Salud {get; set;}
         public List<Item> listaItems = new List<Item>();
 
-        public Elfo (string nombre, int salud)
+        public LosMalos (string nombre, int salud)
         {
             this.Nombre = nombre;
             this.Salud = salud;
@@ -47,11 +47,6 @@ namespace RolePLay
                 DefensaTotal += listaItems[i].Defensa;
             }
             return DefensaTotal;
-        }
-
-        public void Curar()
-        {
-            this.Salud = 100;
         }
     }
 }
