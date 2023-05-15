@@ -2,9 +2,13 @@ using System.Collections.Generic;
 
 namespace RolePLay
 {
-    public class Elfo : Heroe, IAtacable
+    public class Personaje
     {
-        public Elfo (string nombre, int salud)
+        public string Nombre {get;}
+        public int Salud {get;set;}
+        public List<Item> listaItems = new List<Item>();
+
+        public Personaje (string nombre, int salud)
         {
             this.Nombre = nombre;
             this.Salud = salud;
@@ -47,6 +51,7 @@ namespace RolePLay
 
         public void Curar()
         {
+            this.Salud = 100;
         }
     }
 }
