@@ -1,25 +1,39 @@
-name: .NET Core
+name: Build, Test & Generate Docs
 
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
+    branches: [ master ]
 
 jobs:
-  build:
-
+  generate-docs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Configurando .Net 5...
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 6.0.400
-    - name: Instalando dependencias..
-      run: dotnet restore
-    - name: Compilando...
-      run: dotnet build --configuration Release --no-restore
-    - name: Ejecutando Tests...
-      run: dotnet test --no-restore --verbosity normal
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup .NET 6.0
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.400
+
+      - name: Setup Doxygen
+        run: sudo apt-get install -y doxygen
+
+      - name: Installing dependencies...
+        run: dotnet restore
+
+      - name: Building...
+        run: dotnet build
+
+      - name: Running test...
+        run: dotnet test
+
+    - name: Generating docs...
+        working-directory: docs
+        run: doxygen Doxyfile
+        continue-on-error: false
