@@ -7,11 +7,13 @@ namespace RolePLay
         public string Nombre {get;}
         public int Salud {get;set;}
         public List<Item> listaItems = new List<Item>();
-
+        public int ContadorVP{get;set;}
+       
         public Personaje (string nombre, int salud)
         {
             this.Nombre = nombre;
             this.Salud = salud;
+            this.ContadorVP=0;
         }
 
         public void AgregarItem(Item item)
@@ -53,5 +55,9 @@ namespace RolePLay
         {
             this.Salud = 100;
         }
+
+        
+            
+        
     }
 }

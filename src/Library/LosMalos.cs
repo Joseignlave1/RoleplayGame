@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace RolePLay
@@ -11,6 +12,9 @@ namespace RolePLay
             this.VP = VP;
         }
 
-    
+        internal void Remove(List<LosMalos> listaEnemigos)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

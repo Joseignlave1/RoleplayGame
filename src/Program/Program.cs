@@ -6,7 +6,7 @@ namespace RolePLay
     {
         static void Main(string[] args)
         {
-            LosMalos malo1 = new LosMalos ("Marcos",100);
+            LosMalos malo1 = new LosMalos ("Marcos",100,50);
             Item item11 = new Item ("Arma","Machete",10,0);
 
             Enano enano1 = new Enano("Gonza", 100);
