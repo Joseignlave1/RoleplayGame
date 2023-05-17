@@ -4,35 +4,30 @@ namespace RolePLay
 {
     public class CampodeBatalla
     {
-      private List<LosMalos> ListaEnemigos;
-        private List<Personaje> ListaPersonajes;
+        private List<LosMalos> ListaEnemigos;
+        private List<Heroe> ListaHeroes;
     
-    public CampodeBatalla(List<LosMalos> ListaEnemigos,  List<Personaje> ListaPersonajes)
+    public CampodeBatalla(List<LosMalos> ListaEnemigos,  List<Heroe> ListaHeroes)
     {
-       this.ListaEnemigos=ListaEnemigos;
-       this.ListaPersonajes=ListaPersonajes;
-
-
+       this.ListaEnemigos = ListaEnemigos;
+       this.ListaHeroes = ListaHeroes;
     }
 
     public void DoEncounter()
     {
-        while(ListaEnemigos.Count>0 && ListaPersonajes.Count>0)
+        while(ListaEnemigos.Count>0 && ListaHeroes.Count>0)
         {
             // Los enemigos atacan a los hérores primero
             foreach(var Enemigo in ListaEnemigos)
             {
-                if(ListaPersonajes.Count>0)
+                if(ListaHeroes.Count>0)
                 {
-                    var Heroe = ListaPersonajes[0];
-                    Atacar(Enemigo, Heroe);
+                    var Heroe = ListaHeroes[0];
+                    Heroe.RecibirAtaque(Enemigo.ObtenerAtaque());
                     if (Heroe.Salud<=0)
                     {
-                        ListaPersonajes.RemoveAt(0);    // si la salud del persona(Heroe) es menor a 0 lo remuevo de la lista
-                                                            // uso el método RemoveAt de la clase collections generic
-
-                                                      
-
+                        ListaHeroes.RemoveAt(0);    /* si la salud del persona(Heroe) es menor a 0 lo remuevo de la lista
+                                                     uso el método RemoveAt de la clase collections generic */
                     }
 
                     
@@ -42,7 +37,7 @@ namespace RolePLay
         
             }
             // ahora los heroes atacan a los enemigos
-            foreach(var Heroe in ListaPersonajes)
+            foreach(var Heroe in ListaHeroes)
             {
                 foreach(var Enemigo in ListaEnemigos)
                 {
@@ -61,9 +56,9 @@ namespace RolePLay
                         
 
                     }
-                    if(ListaPersonajes.Count>0)
+                    if(ListaHeroes.Count>0)
                     {
-                        foreach(var Heroes in ListaPersonajes)
+                        foreach(var Heroes in ListaHeroes)
                         {
                             if(Heroes.ContadorVP>=5)
                             {
