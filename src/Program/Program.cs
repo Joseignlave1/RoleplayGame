@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace RolePLay
 {
@@ -28,6 +29,7 @@ namespace RolePLay
             Enano enano3 = new Enano ("Anabelle", 100);
             Item item9 = new Item("Arma", "Lanza", 30, 0);
             Item item10 = new Item("Armadura", "Túnica", 0, 10);
+           
 
             mago1.AgregarItem(item9);
             mago1.AgregarItem(item8);
@@ -36,6 +38,25 @@ namespace RolePLay
             Console.WriteLine(enano3.ObtenerDefensa());
             enano3.RecibirAtaque(mago1.ObtenerAtaque());
             enano3.Curar();
+            
+            // agrego un enano  a la lista de personajes y un malo a la lista enemígos para probar el campo de batalla
+            List<Personaje> ListaEnemigos = new List<Personaje>();
+            ListaEnemigos.Add(malo1);
+            
+            List<Personaje> ListaPersonajes = new List<Personaje>();
+            ListaPersonajes.Add(enano1);
+
+            CampodeBatalla campodeBatalla = new CampodeBatalla(ListaEnemigos,ListaPersonajes);
+            campodeBatalla.DoEncounter();
+            
+            Console.ReadLine();
+            System.Console.WriteLine("Hola mundo");
+
+
+
+
+            
+
         }
     }
 }

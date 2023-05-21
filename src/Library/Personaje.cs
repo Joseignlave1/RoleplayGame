@@ -7,7 +7,8 @@ namespace RolePLay
         public string Nombre {get;}
         public int Salud {get;set;}
         public List<Item> listaItems = new List<Item>();
-        public int ContadorVP{get;set;}
+        public int ContadorVP{get;set;} 
+        public int VP{get;}
        
         public Personaje (string nombre, int salud)
         {

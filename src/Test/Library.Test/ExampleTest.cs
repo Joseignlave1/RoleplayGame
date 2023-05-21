@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using RolePLay;
 using RolePlayGame;
 
 namespace Test.Library
