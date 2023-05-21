@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using RolePlay;
+
 
 namespace RolePLay
 {
@@ -7,9 +9,9 @@ namespace RolePLay
     {
         static void Main(string[] args)
         {
-            LosMalos malo1 = new LosMalos ("Marcos",100,50);
+            LosMalos malo = new LosMalos ("Marcos",100,50);
+            LosMalos malo2 = new LosMalos ("Marcospete",100,100);
             Item item11 = new Item ("Arma","Machete",10,0);
-
             Enano enano1 = new Enano("Gonza", 100);
             Item item1 = new Item("Arma", "Martillo", 15, 0);
             Item item2 = new Item("Armadura", "Pechera", 0, 20); 
@@ -41,16 +43,23 @@ namespace RolePLay
             
             // agrego un enano  a la lista de personajes y un malo a la lista enemígos para probar el campo de batalla
             List<Personaje> ListaEnemigos = new List<Personaje>();
-            ListaEnemigos.Add(malo1);
+            ListaEnemigos.Add(malo);
+            ListaEnemigos.Add(malo);
             
             List<Personaje> ListaPersonajes = new List<Personaje>();
             ListaPersonajes.Add(enano1);
+            ListaPersonajes.Add(elfo1);
 
-            CampodeBatalla campodeBatalla = new CampodeBatalla(ListaEnemigos,ListaPersonajes);
+            CampodeBatalla campodeBatalla= new CampodeBatalla(ListaEnemigos,ListaPersonajes);
             campodeBatalla.DoEncounter();
-            
             Console.ReadLine();
-            System.Console.WriteLine("Hola mundo");
+
+            
+            
+
+ 
+          
+            
 
 
 
