@@ -60,6 +60,8 @@ namespace RolePLay
             Console.ReadLine();            
 
             Item item12 = new Item("Arma", "Escudo", 0, 30);
+            Item item13 = new Item("Arma", "Espada", 0, 40);
+            //juiygthgufghhgkdghhyi
           
             
 
