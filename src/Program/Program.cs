@@ -59,7 +59,7 @@ namespace RolePLay
             enano3.ObtenerAtaque();
             Console.ReadLine();            
 
-            Item item12 = new Item("Arma", "Escudo", 0, 30);
+ 
           
             
 
