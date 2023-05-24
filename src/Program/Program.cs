@@ -57,17 +57,8 @@ namespace RolePLay
             Console.ReadLine();
             enano3.ObtenerDefensa();
             enano3.ObtenerAtaque();
-            Console.ReadLine();            
-
- 
-          
-            
-
-
-
-
-            
-
+            Item item15 = new Item("Arma","Pistola",40,0);
+            Item item16 = new Item("Arma","Hacha",30,0);
         }
     }
 }
