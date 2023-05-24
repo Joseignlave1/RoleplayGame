@@ -35,10 +35,10 @@ namespace RolePLay
 
             mago1.AgregarItem(item9);
             mago1.AgregarItem(item8);
-            Console.WriteLine(mago1.ObtenerAtaque());
+            //Console.WriteLine(mago1.ObtenerAtaque);
             enano3.AgregarItem(item8);
-            Console.WriteLine(enano3.ObtenerDefensa());
-            enano3.RecibirAtaque(mago1.ObtenerAtaque());
+            //Console.WriteLine(enano3.ObtenerDefensa());
+            //enano3.RecibirAtaque(mago1.ObtenerAtaque);
             enano3.Curar();
             
             // agrego un enano  a la lista de personajes y un malo a la lista enemígos para probar el campo de batalla
@@ -53,9 +53,11 @@ namespace RolePLay
             CampodeBatalla campodeBatalla= new CampodeBatalla(ListaEnemigos,ListaPersonajes);
             campodeBatalla.DoEncounter();
             Console.ReadLine();
-
-            
-            
+            enano3.ObtenerAtaque();
+            Console.ReadLine();
+            enano3.ObtenerDefensa();
+            enano3.ObtenerAtaque();
+            Console.ReadLine();            
 
  
           

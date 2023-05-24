@@ -4,7 +4,7 @@ namespace RolePLay
 {
     public interface IAtacable
     {
-        void RecibirAtaque(int daño);
+        void RecibirAtaque(Personaje Victima);
         int ObtenerDefensa();
     }
 }

@@ -16,7 +16,7 @@ namespace Test.Library
             Enano enano = new Enano("Enano", 100);
             Item item1 = new Item("Arma", "Martillo", 21, 0);
             Mago mago = new Mago("Mago", 100);
-            mago.RecibirAtaque(enano.ObtenerAtaque());
+            mago.RecibirAtaque(enano);
             int actual = mago.Salud;
             int expected = 100 - 21;
             Assert.That(actual, Is.EqualTo(expected));

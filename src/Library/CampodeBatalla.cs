@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using RolePLay;
 using System.Linq;
-
+// Términar esto hoy!
 namespace RolePlay
 {
     public class CampodeBatalla
@@ -33,7 +33,7 @@ namespace RolePlay
                 {
                     foreach (var Heroe in ListaHeroes.ToList())
                     {
-                        Heroe.RecibirAtaque(Enemigo.ObtenerAtaque());
+                        Heroe.RecibirAtaque(Enemigo);
                         Console.WriteLine($"La salud del héroe {Heroe.Nombre} es {Heroe.Salud}");
                         Console.WriteLine($"La salud del enemigo {Enemigo.Nombre} es {Enemigo.Salud}");
                         if (Heroe.Salud <= 0)
@@ -45,7 +45,7 @@ namespace RolePlay
                             break;
                         }
                     }
-
+ 
                     if (ListaHeroes.Count == 0)
                     {
                         break;
@@ -60,7 +60,7 @@ namespace RolePlay
                 {
                     foreach (var Enemigo in ListaEnemigos.ToList())
                     {
-                        Enemigo.RecibirAtaque(Heroe.ObtenerAtaque());
+                        Enemigo.RecibirAtaque(Heroe);
                         Console.WriteLine($"La salud del héroe {Heroe.Nombre} es {Heroe.Salud}");
                         Console.WriteLine($"La salud del enemigo {Enemigo.Nombre} es {Enemigo.Salud}");
                         if (Enemigo.Salud <= 0)
@@ -97,7 +97,7 @@ namespace RolePlay
 
     EnemigosPrimero = !EnemigosPrimero;
 }
-
+    
 
     }
 }

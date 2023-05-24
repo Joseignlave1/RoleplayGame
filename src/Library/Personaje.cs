@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace RolePLay
@@ -8,8 +9,9 @@ namespace RolePLay
         public int Salud {get;set;}
         public List<Item> listaItems = new List<Item>();
         public int ContadorVP{get;set;} 
-        public int VP{get;}
-       
+        public int VP{get;set;}
+
+
         public Personaje (string nombre, int salud)
         {
             this.Nombre = nombre;
@@ -27,17 +29,18 @@ namespace RolePLay
             listaItems.Remove(item);
         }
 
-        public void RecibirAtaque(int daño)
+        public  virtual void RecibirAtaque(Personaje Victima)
         {
-            this.Salud = this.Salud - (this.ObtenerDefensa() - daño);
+           Victima.Salud -= ObtenerAtaque();
         }
 
-        public int ObtenerAtaque()
+            public int ObtenerAtaque()
         {
             int AtaqueTotal = 0;
             for (int i = 0; i < listaItems.Count; i++)
             {
                 AtaqueTotal += listaItems[i].Daño;
+                System.Console.WriteLine(AtaqueTotal);
             }
             return AtaqueTotal;
         }
@@ -57,8 +60,5 @@ namespace RolePLay
             this.Salud = 100;
         }
 
-        
-            
-        
     }
 }
