@@ -59,7 +59,7 @@ namespace RolePLay
             enano3.ObtenerAtaque();
             Console.ReadLine();            
 
-            //test.
+            
             
 
 
