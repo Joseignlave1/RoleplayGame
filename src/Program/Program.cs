@@ -43,10 +43,12 @@ namespace RolePLay
             
             // agrego un enano  a la lista de personajes y un malo a la lista enemígos para probar el campo de batalla
             List<Personaje> ListaEnemigos = new List<Personaje>();
+            malo.AgregarItem(item9);
             ListaEnemigos.Add(malo);
-            ListaEnemigos.Add(malo);
+            ListaEnemigos.Add(malo2);
             
             List<Personaje> ListaPersonajes = new List<Personaje>();
+            enano1.AgregarItem(item7);
             ListaPersonajes.Add(enano1);
             ListaPersonajes.Add(elfo1);
 
@@ -59,7 +61,7 @@ namespace RolePLay
             enano3.ObtenerAtaque();
             Console.ReadLine();            
 
-            
+            Item item12 = new Item("Combinado", "Cosa", item3.Daño + item11.Daño, item3.Defensa + item11.Defensa);
             
 
 
