@@ -31,7 +31,7 @@ namespace RolePLay
 
         public  virtual void RecibirAtaque(Personaje Victima)
         {
-           Victima.Salud -= ObtenerAtaque();
+           Victima.Salud -= Victima.ObtenerAtaque();
         }
 
             public int ObtenerAtaque()
