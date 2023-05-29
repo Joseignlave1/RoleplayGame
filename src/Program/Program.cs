@@ -57,14 +57,16 @@ namespace RolePLay
             Console.ReadLine();
             enano3.ObtenerDefensa();
             enano3.ObtenerAtaque();
-            Console.ReadLine();
+            Console.ReadLine();            
 
-
+            //test.
+            
 
 
 
 
             
+
         }
     }
 }
